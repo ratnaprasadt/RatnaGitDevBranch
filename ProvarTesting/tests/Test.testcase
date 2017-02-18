@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testCase id="13">
+  <summary/>
+  <steps>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexConnect" name="ApexConnect" testItemId="1" title="Salesforce Connect: AutoRABIT_DE (Test)">
+      <arguments>
+        <argument id="connectionName">
+          <value class="value" valueClass="string">AutoRABIT_DE</value>
+        </argument>
+        <argument id="resultName">
+          <value class="value" valueClass="string">AutoRABIT_DE</value>
+        </argument>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+        <argument id="uiApplicationName"/>
+        <argument id="quickUiLogin">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="closeAllPrimaryTabs">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="reuseConnectionName"/>
+        <argument id="alreadyOpenBehaviour">
+          <value class="value" valueClass="string">Fail</value>
+        </argument>
+        <argument id="vfDebug"/>
+        <argument id="enableObjectIdLogging">
+          <value class="value" valueClass="boolean">true</value>
+        </argument>
+        <argument id="autoCleanup"/>
+        <argument id="cleanupConnectionName"/>
+        <argument id="logFileLocation"/>
+        <argument id="username"/>
+        <argument id="password"/>
+        <argument id="securityToken"/>
+        <argument id="environment"/>
+        <argument id="lightningMode">
+          <value class="value" valueClass="string">default</value>
+        </argument>
+      </arguments>
+    </apiCall>
+    <apiCall apiId="com.provar.plugins.forcedotcom.core.testapis.ApexCreateObject" name="ApexCreateObject" parameterGeneratorUri="command:com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand" testItemId="5" title="Create Object: Account=&gt;AccountId">
+      <arguments>
+        <argument id="objectType">
+          <value class="value" valueClass="string">Account</value>
+        </argument>
+        <argument id="resultIdName">
+          <value class="value" valueClass="string">AccountId</value>
+        </argument>
+        <argument id="apexConnectionName">
+          <value class="value" valueClass="string">AutoRABIT_DE</value>
+        </argument>
+        <argument id="Name">
+          <value class="value" valueClass="string">AccountTwo2</value>
+        </argument>
+        <argument id="ParentId">
+          <value class="value" valueClass="string">0016F00001rpkKWQAY</value>
+        </argument>
+        <argument id="CleanStatus">
+          <value class="value" valueClass="string">Pending</value>
+        </argument>
+        <argument id="CustomerPriority__c">
+          <value class="value" valueClass="string">High</value>
+        </argument>
+        <argument id="Active__c">
+          <value class="value" valueClass="string">Yes</value>
+        </argument>
+        <argument id="SLAExpirationDate__c">
+          <value class="value" valueClass="date">1484697600000</value>
+        </argument>
+        <argument id="assignmentRuleId"/>
+        <argument id="resultScope">
+          <value class="value" valueClass="string">Test</value>
+        </argument>
+      </arguments>
+      <parameterGeneratorProperties>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.ConnectionName">AutoRABIT_DE</propertyValue>
+        <propertyValue name="com.provar.plugins.forcedotcom.ui.commands.CreateCustomObjectTestStepCommand.CustomObjectName">Account</propertyValue>
+      </parameterGeneratorProperties>
+      <generatedParameters>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Name" name="Name" title="Name"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=ParentId" name="ParentId" title="ParentId"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=CleanStatus" name="CleanStatus" title="CleanStatus"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=CustomerPriority__c" name="CustomerPriority__c" title="CustomerPriority__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=Active__c" name="Active__c" title="Active__c"/>
+        <apiParam group="fields" modelBinding="sf:ui:binding:object?object=Account&amp;field=SLAExpirationDate__c" name="SLAExpirationDate__c" title="SLAExpirationDate__c"/>
+      </generatedParameters>
+    </apiCall>
+  </steps>
+</testCase>

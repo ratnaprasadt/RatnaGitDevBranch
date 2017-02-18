@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites>
+  <testsuite failures="1" hostname="DESKTOP-VM27JSL" id="0" name="ProvarTesting/tests" package="" skipped="0" tests="1" time="628.512" timestamp="Sat Feb 18 12:12:18 IST 2017">
+	    <properties>
+		      <property name="projectPath" value="C:/Users/ratnaprasad/Desktop/ProvarTesting/ProvarTesting" />
+
+		      <property name="resultsPath" value="C:/Users/ratnaprasad/Desktop/ProvarTesting/ProvarTesting/ANT/Results" />
+
+		      <property name="resultsPathDisposition" value="Increment" />
+
+		      <property name="projectCachePath" value="../../.provarCaches" />
+
+		      <property name="excludeCallableTestCases" value="true" />
+
+		      <property name="salesforceMetadataCache" value="Reuse" />
+
+		      <property name="testEnvironment" value="" />
+
+		      <property name="webBrowserConfiguration" value="Full Screen" />
+
+		      <property name="webBrowserType" value="Google Chrome" />
+
+		      <property name="testOutputLevel" value="WARNING" />
+
+		      <property name="pluginOutputLevel" value="WARNING" />
+
+	    </properties>
+
+	    <testcase classname="tests/PETZEL.testcase" name="PETZEL.testcase" time="625.833">
+		      <failure message="Execution failed">	at com.provar.core.testapi.ProvarWebDriverCommandProcessor.execute(ProvarWebDriverCommandProcessor.java:154)</failure>
+
+	    </testcase>
+
+  </testsuite>
+</testsuites>
