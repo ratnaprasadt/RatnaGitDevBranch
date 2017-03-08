@@ -1,0 +1,33 @@
+<project default="runtests">
+	<property environment="env"/>
+	<property name="provar.home" value="C:/Program Files/Provar/"/>
+	<property name="testproject.home" value="C:/Users/ratnaprasad/Desktop/ProvarTesting/ProvarTesting"/>
+	<property name="testproject.results" value="C:/Users/ratnaprasad/Desktop/ProvarTesting/ProvarTesting/ANT/Results"/>
+	<taskdef name="Provar-Compile" classname="com.provar.testrunner.ant.CompileTask" classpath="${provar.home}/ant/ant-provar.jar"/>
+	<taskdef name="Run-Test-Case" classname="com.provar.testrunner.ant.RunnerTask" classpath="${provar.home}/ant/ant-provar.jar;${provar.home}/ant/ant-provar-bundled.jar;${provar.home}/ant/ant-provar-sf.jar"/>
+	<taskdef name="Test-Cycle-Report" classname="com.provar.testrunner.ant.TestCycleReportTask" classpath="${provar.home}/ant/ant-provar.jar;"/>
+	
+	<target name="runtests">
+	
+		<Provar-Compile provarHome="${provar.home}" projectPath="${testproject.home}"/>
+	
+		<Run-Test-Case provarHome="${provar.home}" 
+				projectPath="${testproject.home}" 
+				resultsPath="${testproject.results}" 
+				resultsPathDisposition="Increment" 
+				testEnvironment="" 
+				webBrowser="Chrome" 
+				webBrowserConfiguration="Full Screen" 
+				excludeCallableTestCases="true" 
+				salesforceMetadataCache="Reuse" 
+				projectCachePath="../../.provarCaches" 
+				testOutputlevel="WARNING" 
+				pluginOutputlevel="WARNING"
+				>
+		
+			<fileset dir="../tests"><include name="PETZEL.testcase"/></fileset>
+
+		</Run-Test-Case>
+
+	</target>
+</project>
